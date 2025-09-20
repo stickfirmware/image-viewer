@@ -1,5 +1,7 @@
-# Stick firmware v1 app template
+# Image viewer for Stick firmware
 
-Place your files in ``/app`` directory, edit manifest in ``/app/manifest.json``
+Get package from github releases and install with File Explorer
 
-Build with ``/build.bat`` or just zip it without compression and change extension to ``.stk``
+## Converting images (PC Only)
+To use image viewer you need to convert them with ``converter.py``
+To use ``converter.py`` you need to install ``pillow`` using ``pip install pillow``
