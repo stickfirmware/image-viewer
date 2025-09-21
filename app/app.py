@@ -1,4 +1,5 @@
 import time
+import machine
 
 import apps.thirdparty.com_kitki30_image_viewer.display_img as disp
 
@@ -27,7 +28,10 @@ def run():
             file = file_explorer.run(True, "/")
             if file == None:
                 continue
+
+            machine.freq(osc.ULTRA_FREQ)
             disp.disp(tft, file)
+            machine.freq(osc.BASE_FREQ)
             
             while not btn_combos.any_btn(["a", "b", "c"]):
                 time.sleep(osc.LOOP_WAIT_TIME)
